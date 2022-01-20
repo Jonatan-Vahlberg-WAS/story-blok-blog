@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   padding: 4px;
   gap: 24px;
   text-align: center;
+  margin: 0 32px;
 `
 
 const ContentWrapper = styled.div`
