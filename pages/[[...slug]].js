@@ -55,7 +55,7 @@ export async function getStaticProps({
     starts_with: "global",
   });
 
-  console.log(global_data);
+  
 
   return {
     props: {

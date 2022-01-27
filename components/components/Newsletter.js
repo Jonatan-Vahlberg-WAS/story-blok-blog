@@ -38,7 +38,7 @@ const SubscribeBox = styled.div`
 
 const Newsletter = ({blok}) => {
   const html = Storyblok.richTextResolver.render(blok.text)
-  console.log("HTML ", blok)
+  
   return (
     <Wrapper>
       <img src={blok.image.filename}/>

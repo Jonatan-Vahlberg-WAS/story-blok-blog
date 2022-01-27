@@ -16,11 +16,14 @@ const LineText = styled.span`
   border: ${({theme, color, lineStyle}) => `0.5px ${lineStyle} ${color}`};
 `
 
-const Divider = ({blok}) => {
+const Divider = ({blok = {
+  style: "solid",
+  color: "#2a2a2a60"
+}, style = {}}) => {
   
   return (
     <div className="w-full">
-      <DividerLine lineStyle={blok.style} color={blok.color}>
+      <DividerLine style={style} lineStyle={blok.style} color={blok.color}>
         {blok.text && <LineText lineStyle={blok.style} color={blok.color}>{blok.text}</LineText>}
       </DividerLine>
     </div>

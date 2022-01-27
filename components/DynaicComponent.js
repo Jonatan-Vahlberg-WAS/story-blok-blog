@@ -1,3 +1,6 @@
+import Blogpost from "./Blogpost"
+import AuthorBlock from "./components/Author"
+import Bloglist from "./components/Bloglist"
 import Divider from "./components/Divider"
 import Hero from "./components/Hero"
 import Navbar from "./components/Nav"
@@ -8,10 +11,13 @@ import Placeholder from "./Placeholder"
 
 const components = {
   page: Page,
+  blogpost: Blogpost,
   hero: Hero,
   divider: Divider,
   newsletter: Newsletter,
   navbar: Navbar,
+  blog_list: Bloglist,
+  author: AuthorBlock
 }
 
 const DynamicComponent = ({blok}) => {

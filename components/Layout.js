@@ -6,13 +6,13 @@ const LayoutWrapper = styled.div`
   margin: 32px auto;
 
   @media (max-width: 1200px) {
-    margin: 32px 16px;
+    margin: 32px auto;
     padding-right: 16px;
   }
 `;
 
 const Layout = ({ children, data, locale, locales, story }) => {
-  console.log(data);
+  
   return (
     <>
       {data && (

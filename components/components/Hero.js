@@ -1,4 +1,3 @@
-import Link from "next/Link";
 import { useEffect, useState } from "react";
 import CallToAction from "./CallToAction";
 import { useInterval } from "usehooks-ts";

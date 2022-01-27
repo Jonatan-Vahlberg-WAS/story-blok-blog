@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Navitem from "./NavItem"
 
 const Wrapper = styled.div`
-  margin-top: 32px;
+  margin: 32px 0 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -13,11 +13,11 @@ const Wrapper = styled.div`
 `
 
 const Navbar = ({blok}) =>  {
-  console.log(blok.items)
+  
   return (
     <Wrapper background={blok?.background?.filename}>
       {blok.items?.map(item => (
-          <Navitem blok={item}/>
+          <Navitem key={item._uid} blok={item}/>
   ))}
     </Wrapper>
   )

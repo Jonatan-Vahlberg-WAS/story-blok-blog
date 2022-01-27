@@ -40,7 +40,7 @@ const Navitem = ({blok}) => {
     <Wrapper>
      <Title>{blok.title}</Title>
       <div>
-     <Link href={blok.link.cached_url}>
+     <Link href={`/${blok.link.cached_url}`}>
 
       <a>
         <CallToAction>{blok.call_to_action}</CallToAction>
