@@ -39,7 +39,7 @@ export async function getStaticProps({
 
   let sbParams = {
     version: "draft", // or "published"
-    resolve_relations: ["featured-posts.posts", "selected-posts.posts"],
+    resolve_relations: [],
     language: locale,
   };
 
@@ -74,7 +74,7 @@ export async function getStaticProps({
 
 export async function getStaticPaths({ locales }) {
   let { data } = await Storyblok.get("cdn/links/");
-
+  console.log("DATA",data)
   let paths = [];
   Object.keys(data.links).forEach((linkKey) => {
     if (data.links[linkKey].is_folder) {
@@ -91,7 +91,7 @@ export async function getStaticPaths({ locales }) {
       paths.push({ params: { slug: splittedSlug }, locale });
     }
   });
-
+  console.log("PATHS ",paths?.[0])
   return {
     paths: paths,
     fallback: false,

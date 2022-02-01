@@ -40,18 +40,19 @@ const Text = styled.p.attrs({ className: "text" })`
   color: #2a2a2acc;
 `;
 
-const BlogListitem = ({ blok }) => {
-  console.log(blok.link)
+const BlogListitem = ({  post }) => {
+  console.log("ITEM",post)
+  const {content} = post
   return (
     <Wrapper>
-      <ContentImage src={blok.image.filename} />
+      <ContentImage src={content.image.filename} />
       <ContentWrapper>
-        <AuthorBlock blok={blok.author[0]} inList={true} />
-        <Link href={`/${blok.link.cached_url}`}>
+        <AuthorBlock blok={content.author[0]} inList={true} />
+        <Link href={`/${post.full_slug}`}>
           <a>
             <TextContainer>
-              <Title>{blok.title}</Title>
-              <Text>{blok.preamble}</Text>
+              <Title>{content.title}</Title>
+              <Text>{content.intro}</Text>
             </TextContainer>
           </a>
         </Link>

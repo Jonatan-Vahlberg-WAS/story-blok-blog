@@ -2,7 +2,6 @@ import SbEditable from "storyblok-react"
 import styled from "styled-components"
 import Storyblok from "../utils/Storyblok";
 import AuthorBlock from "./components/Author"
-import DynamicComponent from "./DynaicComponent"
 
 const Title = styled.p.attrs({ className: "title" })`
   font-size: 32px;
@@ -10,7 +9,7 @@ const Title = styled.p.attrs({ className: "title" })`
   margin: 8px 0 16px;
 `;
 
-const Text = styled.p.attrs({ className: "text" })`
+const Text = styled.div.attrs({ className: "text" })`
   color: #2a2a2acc;
 `;
 
